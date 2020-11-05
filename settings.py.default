@@ -1,0 +1,9 @@
+
+_TOKEN = ''
+GROUP_ID = 198864592
+
+DB_CONFIG = dict(
+    provider='sqlite',
+    filename='vk_chat_bot.sqlite',
+    create_db=True
+)
