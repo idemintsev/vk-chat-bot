@@ -33,4 +33,3 @@ def handle_email(text, context):
 
 def get_ticket_handler(text, context):
     return get_ticket(name=context['name'], email=context['email'])
-

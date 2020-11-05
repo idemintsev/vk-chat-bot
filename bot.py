@@ -21,7 +21,6 @@ except ImportError:
 
 
 class Bot:
-
     """
     Сценарий регистрации на конференцию "My conference" через vk.com.
     Use python3.7
@@ -144,7 +143,7 @@ class Bot:
 
 if __name__ == '__main__':
 
-    get_logger(log_level='INFO')
+    get_logger(log_level='ERROR')
     vk_bot = Bot(group_id=GROUP_ID, token=_TOKEN)
     try:
         vk_bot.run()

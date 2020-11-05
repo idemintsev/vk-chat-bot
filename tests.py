@@ -15,6 +15,7 @@ def isolate_bd(test_func):
         with db_session():
             test_func(*arqs, **kwargs)
             rollback()
+
     return wrapper
 
 
@@ -78,7 +79,8 @@ class Test1(TestCase):
         intents_scenarios.SCENARIOS['registration']['steps']['step1']['text'],
         intents_scenarios.SCENARIOS['registration']['steps']['step2']['text'],
         intents_scenarios.SCENARIOS['registration']['steps']['step2']['failure_text'],
-        intents_scenarios.SCENARIOS['registration']['steps']['step3']['text'].format(name='Игорь', email='email@email.ru')
+        intents_scenarios.SCENARIOS['registration']['steps']['step3']['text'].format(name='Игорь',
+                                                                                     email='email@email.ru')
     ]
 
     @isolate_bd
